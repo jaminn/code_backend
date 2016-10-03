@@ -1,0 +1,205 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  color: #5a5a5a;
+}
+/*
+footer{
+    height: 30px;
+    background-color: #FD9828;
+}
+*/
+.footer {
+    margin-top: 30px;
+    height: 100px;
+    background-color: #FD9F28;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #FFF;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+/*카드뷰랑 설명*/
+.row featurette{
+   margin-left: 10%; 
+   margin-right: 10%; 
+}
+#mv-tiles{
+        height: calc(146px + 130px);
+    line-height: 146px;
+        -webkit-user-select: none;
+    font-size: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    text-align: -webkit-auto;
+    transition: opacity 1s;
+}
+#myCarousel{
+    text-align: center;
+    color: #FFF;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    margin-top: 50px;
+}
+
+#mainTitle{
+    padding-top: 40px;
+}
+
+/*인풋 그룹 Search code 부분전체 (검색전체를 그룹화시킨 클레스)*/
+.input-group{
+  margin-top: 30px;
+  margin-left: 25.5%;
+  width: 50%;
+  height: 30px;
+}
+
+#mainSearch{
+    height: 40px;
+}
+
+/*input중 서치옆에 붙어있는 이미지 크기조절*/
+#search_Img{
+    width: 21px; 
+    height: 21px;
+}
+
+
+/*검색옆에붙어있는 애드온 색깔설정*/
+#sizing-addon2{
+    background-color: #F9A825;
+}
+
+.thumbnail{
+    width: calc(156px - 2px);
+        margin-top: 0px;
+    margin-right: 8px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+        height: calc(130px - 2px);
+}
+
+.carousel {
+  height: 300px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
