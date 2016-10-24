@@ -14,3 +14,4 @@
 
 
 # hey ?!
+plz turn off the notification omg 
