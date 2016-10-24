@@ -12,6 +12,3 @@
 * add DB 
 * something else
 
-
-# hey ?!
-plz turn off the notification omg 
