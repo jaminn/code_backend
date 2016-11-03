@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)file:///Users/user/Desktop/dicon/asdf/Dashboard%20Template%20for%20Bootstrap.htm -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/mark.png">
+    <title>Codination</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./stylesheets/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./stylesheets/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="markCodi">
+                    <img src="mark.png" id="mark">
+                    <a class="navbar-brand">CODINATION</a>
+                </div>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right" id="loginSign">
+                    <li><a data-toggle="modal" data-target="#myModal2">LOGIN</a></li>
+                    <li><a data-toggle="modal" data-target="#myModal1">SIGN UP</a></li>
+                </ul>
+                <div>
+                    <!--                    <img src="searchIcon.png" id="searchIcon">-->
+                    <form class="navbar-form navbar-right" id="navbar-right">
+                        <input type="text" id="searchForm" class="form-control" placeholder="Search..." style="width: 90%;">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal1 -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="height:120px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">SIGN UP</h4>
+                </div>
+                <div class="modal-body" style="height: 200px;">
+                    <div class="signBtn">
+                        <div class="btn-group" style="display: block;margin-bottom: 0px;">
+                            <a class="btn btn-danger" href="" style="
+    width: 100%;
+"> <img id="google" src="images/google.png" style="float:left; margin-left:30px; margin-top:18px;">
+                                <p class="signText">Sign in with Google</p>
+                            </a>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class="btn-group">
+                            <a class="btn btn-primary " href="" style="width:100%;height:5em;margin-top: 20px;margin-bottom: 40px;"><img id="facebook" src="images/Facebook_icon.png" style="float:left; margin-left:30px; margin-top:18px;">
+                                <p class="signText">Sign in with Facebook</p>
+                            </a>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal2 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="height:120px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">LOG IN</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="signBtn">
+                        <div class="btn-group" style="display: block;margin-bottom: 0px;">
+                            <a class="btn btn-danger" href="" style="
+    width: 100%;
+"> <img id="google" src="images/google.png" style="float:left; margin-left:30px; margin-top:18px;">
+                                <p class="signText">Sign in with Google</p>
+                            </a>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class="btn-group">
+                            <a class="btn btn-primary " href="" style="width:100%;height:5em;margin-top: 10px;margin-bottom: 40px;"><img id="facebook" src="images/Facebook_icon.png" style="float:left; margin-left:30px; margin-top:18px;">
+                                <p class="signText">Sign in with Facebook</p>
+                            </a>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div style="width: 100%;" margin-bottom: 30px;>
+                        <div style="margin-top:40px;">
+
+                            <label class="UIInput" data-reactid=".3.1.0.1.1.1.0">
+                                <input name="username" spellcheck="false" autocorrect="off" placeholder="Type your username" class="UIInput-input" type="text" data-reactid=".3.1.0.1.1.1.0.0"><span class="UIInput-label" data-reactid=".3.1.0.1.1.1.0.1">USERNAME</span></label>
+                        </div>
+                        <div style="margin-top:40px;">
+
+                            <label class="UIInput" data-reactid=".3.1.0.1.1.1.1">
+                                <input name="password" placeholder="Type your password" class="UIInput-input" type="password" data-reactid=".3.1.0.1.1.1.1.0"><span class="UIInput-label" data-reactid=".3.1.0.1.1.1.1.1">PASSWORD</span></label>
+                        </div>
+                    </div>
+                    <button class="loginBtn" type="button" data-dismiss="modal" style="
+    color: #fff;
+    background-color: #FD9F28;
+    width: 100%;
+    height: 50px;
+    border: none;
+                                                                                           margin-top: 30px;
+">LOG IN</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sub-header">
+        <p class="SearchResultFor">Searach result for</p>
+        <p class="ASED">ASED</p>
+    </div>
+
+    <div class="contents">
+        <div class="contentsHeader">
+            ASED (42)
+        </div>
+        <div class="allContentsTable">
+            <div class="contentsTable">
+                <div class="contentsTitle">
+                    <h4 class="contentsTitleText">asdfasdf/qwer</h4></div>
+                <div class="contentsText">헤에헤에헤에에에</div>
+                <div class="contentsDate">Updated on Sep 15 2016</div>
+            </div>
+            <hr>
+            <div class="contentsTable">
+                <div class="contentsTitle">
+                    <h4 class="contentsTitleText">asdfasdf/qwer</h4></div>
+
+                <div class="contentsText">헤에헤에헤에에에</div>
+                <div class="contentsDate">Updated on Sep 15 2016</div>
+            </div>
+            <hr>
+
+            <div class="contentsTable">
+                <div class="contentsTitle">
+                    <h4 class="contentsTitleText">asdfasdf/qwer</h4></div>
+
+                <div class="contentsText">헤에헤에헤에에에</div>
+                <div class="contentsDate">Updated on Sep 15 2016</div>
+            </div>
+            <hr>
+
+            <div class="contentsTable">
+                <div class="contentsTitle">
+                    <h4 class="contentsTitleText">asdfasdf/qwer</h4></div>
+
+                <div class="contentsText">헤에헤에헤에에에</div>
+                <div class="contentsDate">Updated on Sep 15 2016</div>
+            </div>
+            <hr>
+
+            <div class="contentsTable">
+                <div class="contentsTitle">
+                    <h4 class="contentsTitleText">asdfasdf/qwer</h4></div>
+
+                <div class="contentsText">헤에헤에헤에에에</div>
+                <div class="contentsDate">Updated on Sep 15 2016</div>
+            </div>
+            <hr>
+
+            <div class="contentsTable">
+                <div class="contentsTitle">
+                    <h4 class="contentsTitleText">asdfasdf/qwer</h4></div>
+
+                <div class="contentsText">헤에헤에헤에에에</div>
+                <div class="contentsDate">Updated on Sep 15 2016</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="PAGENATION">
+        <nav>
+            <ul class="pagination">
+                <li>
+                    <a href="file:///Users/user/Desktop/Dashboard%20Template%20for%20Bootstrap.htm#" aria-label="Previous">
+                        <span aria-hidden="true">«</span>
+                    </a>
+                </li>
+                <li class="active"><a href="file:///Users/user/Desktop/Dashboard%20Template%20for%20Bootstrap.htm#">1 <span class="sr-only">(current)</span></a></li>
+                <li><a href="file:///Users/user/Desktop/Dashboard%20Template%20for%20Bootstrap.htm#">2</a></li>
+                <li><a href="file:///Users/user/Desktop/Dashboard%20Template%20for%20Bootstrap.htm#">3</a></li>
+                <li><a href="file:///Users/user/Desktop/Dashboard%20Template%20for%20Bootstrap.htm#">4</a></li>
+                <li><a href="file:///Users/user/Desktop/Dashboard%20Template%20for%20Bootstrap.htm#">5</a></li>
+                <li>
+                    <a href="file:///Users/user/Desktop/Dashboard%20Template%20for%20Bootstrap.htm#" aria-label="Next">
+                        <span aria-hidden="true">»</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="footer">
+        <footer> </footer>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./stylesheets/jquery.min.js"></script>
+    <script src="./stylesheets/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="./stylesheets/holder.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./stylesheets/ie10-viewport-bug-workaround.js"></script>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;">
+        <defs></defs>
+        <text x="0" y="10" style="font-weight:bold;font-size:10pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">200x200</text>
+    </svg>
+
+
+</body>
+
+</html>
