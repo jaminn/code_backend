@@ -1,0 +1,103 @@
+h4 {
+            margin: 0px;
+        }
+        
+        header {
+            margin-top: 0;
+            margin-left: 10%;
+            margin-right: 10%;
+            height: 50px;
+            background-color: #fff;
+            background-color: #fff;
+        }
+        
+        .content-container {
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-top: 70px;
+            margin-bottom: 160px;
+        }
+        
+        .seriesName-container {
+            font-size: 15px;
+        }
+        
+        #series {
+            color: #fff;
+            background-color: #FD9F28;
+            border-radius: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        #seriesName {
+            color: #CCCCCC;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .seriesName-container {
+            font-size: 15px;
+        }
+        
+        #editViewTitle {
+            font-size: 50px;
+            color: #707070;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        #editViewDate {
+            font-size: 15px;
+            color: #CCCCCC;
+            float: right;
+        }
+        
+        .userName-container {
+            color: #858585;
+            font-size: 17px;
+        }
+        
+        #editViewContents {
+            color: #767676;
+        }
+        
+        .middle-container {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        
+        #editViewInfo {
+            margin-top: 20px;
+            color: #767676;
+        }
+        
+        .rec {
+            width: 40%;
+            position: absolute;
+            left: -100%;
+            right: -100%;
+            top: -100%;
+            bottom: -100%;
+            margin: auto;
+            min-height: 100%;
+            min-width: 100%;
+        }
+        
+        #recRight {
+            margin-right: 19%;
+        }
+        
+        footer {
+            height: 100px;
+            background-color: #FD9F28;
+        }
+        
+        @media screen and (max-width: 715px) {
+            .rec {
+                margin-right: 0%;
+            }
+            #recRight {
+                margin-right: 0%;
+            }
+        }
