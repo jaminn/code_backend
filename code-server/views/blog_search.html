@@ -10,23 +10,33 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/image/logo.png">
+    <link rel="icon" href="image/logo.png">
     <title>CODINATION</title>
-    <link href="/CSS/navbar.css" rel="stylesheet">
+    <link href="./CSS/navbar.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="./CSS/bootstrap.min.css" rel="stylesheet">
     <!--    추가 css-->
-    <link href="/CSS/seriesCicked.css" rel="stylesheet">
+    <link href="./CSS/seriesCicked.css" rel="stylesheet">
+    <link href="./CSS/AfterSeriesClicked.css" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="/CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="./CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/JS/ie-emulation-modes-warning.js"></script>
+    <script src="./JS/ie-emulation-modes-warning.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .navbar-nav>li>a {
+            color: #777 !important;
+        }
+        
+        #bs-example-navbar-collapse-1{
+            background-color: whitesmoke;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,7 +54,7 @@
             <div class="navbar-header" style="
     margin: 0;
     width: 100%;
-    background: #fd5830;
+    background: #ffa000;
 ">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="
     margin-left: 15px;
@@ -53,13 +63,10 @@
 "> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#" style="
     margin-left: 5px;
     color: #fff;
-"><span><img style="
-    width: 30px;
-    margin-right: 5px;
-" id="logo" src="/image/logo.png"></span>
+"><span></span>
                 CODINATION
                 </a>
-                <form class="navbar-form navbar-left" style="
+                <form class="navbar-form navbar-right" style="
     border-radius: 3px;
     padding: 0;
     background-color: #fff;
@@ -74,10 +81,13 @@
 ">
                         <input type="text" class="form-control" placeholder="Search" style="width: 100%;border: none;"> </div>
                     <button type="submit" class="btn btn-default" style="
-    margin-top: 3px;
     float: right;
     border: none;
-"> <img src="/image/search.png"></button>
+ height: 34px;
+"> <img src="image/search.png" style="
+    width: 15px;
+    height: 15px;
+"></button>
                 </form>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -91,7 +101,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#"><img src="/image/user.png" style="
+                        <a href="#"><img src="image/user.png" style="
     height: 20px;
     margin-right: 5px;
 ">구자민 </a>
@@ -105,11 +115,11 @@
     <div>
         <div class="woodBg">
             <div class="woodIn">
-                <div class="subTitle"> <img src="/image/user.png" style="width:30px;height:30px;"> <span>구자민 님의 시리즈</span> </div>
+                <div class="subTitle"> <img src="image/user.png" style="width:30px;height:30px;"> <span>박상천 님의 시리즈</span> </div>
                 <div class="mainTitle">
-                    <h1>영어 듣기 강좌</h1> </div>
+                    <h1>대회, 컨퍼런스</h1> </div>
                 <div>
-                    <button class="mainBtn"> 첫편 보기 </button>
+                    <!--    <button class="mainBtn"> 첫편 보기 </button>-->
                 </div>
             </div>
         </div>
@@ -125,53 +135,62 @@
         <div style="
     padding-top: 30px;
 ">
-            <div class="media" style="
-    position: relative;
-    margin-right: 10%;
-    margin-left: 10%;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-right: 3%;
-    padding-left: 3%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-">
-                <div class="media-body" id="cardTitle">
-                    <h4 class="media-heading">영어듣기 강좌</h4>
-                    <div id="cardTime">17분전</div>
-                    <div id="cardText">내용 내용 내용 내용 내용용</div>
-                    <div id="cardEtc"> <img src="/image/memo.png"> 3 </div>
+            <div class="media">
+                <div class="cardHeader">
+                    <div>
+                        <div>
+                            <h4>IoT 장비의 역습…디도스 공격에 美 인터넷 마비 </h4></div>
+                        <div style="
+    text-align: right;
+    font-size: 12px;
+    color: #949494;
+">2016.11.02 </div>
+                    </div>
                 </div>
-                <div class="media-right">
-                    <a href="#"> <img class="media-object" id="sumnail" src="http://66.media.tumblr.com/7323119fee8c9e9fd0183863b1d057ba/tumblr_nqvbuqFTgb1rkgzgco1_500.gif" alt="..." style="
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-"> </a>
+                <div class="cardBody">
+                    <p class="text"> 10월 21일 미국인터넷 도메인 사이트 딘(dyn)이 대규모 디도스 공격을 받아서 아마존, 트위터, 넷플릭스, 페이팔, 뉴욕타임스 등 수십 개의 주요 웹사이트들이 수 시간 가량 접속이 불가능하거나 지연됐다. [출처] IoT 장비의 역습…디도스 공격에 美 인터넷 마비 </p>
                 </div>
-                <div class="media-right" style="
-    position: absolute;
-    bottom: 15px;
-    right: 3%;
-">
-                    <a href="#"> <img class="media-object" src="/image/plus.png" alt="..." style="
-    width: 20px;
-"> </a>
+                <div class="cardFooter"> <span style="
+    margin-right: 2%;
+"><img src="image/heart.png"><span style="margin-left: 1%;color:#B8B8B8;">0</span></span> <span style="
+    margin-right: 2%;
+"><img src="image/conversation.png"><span style="margin-left: 1%;color:#B8B8B8;">1</span></span> <span><img src="image/export.png"></span> </div>
+            </div>
+            <div class="media">
+                <div class="cardHeader">
+                    <div>
+                        <div>
+                            <h4>WHITHCON 컨퍼런스</h4></div>
+                        <div style="
+    text-align: right;
+    font-size: 12px;
+    color: #949494;
+">2016.11.02</div>
+                    </div>
                 </div>
+                <div class="cardBody">
+                    <p class="text">세종대 정보 보안 학과 세종대학교 보안동아리인 S!(Security Factorial)이 나와 요즘 핫이슈인 iot 관련 해킹시연을 했습니다 해킹시연 시나리오는 피해자의 핸드폰에 악성파일인 apk를 다운받아 피해자의 메세지&연락처를 탈취하고 카메라로 사진을 찍어 연결되있는 프린터기로 사진을 출력해 협박하는 문자를 보낸다 입니다. </p>
+                </div>
+                <div class="cardFooter"> <span style="
+    margin-right: 2%;
+"><img src="image/heart.png"><span style="margin-left: 1%;color:#B8B8B8;">0</span></span> <span style="
+    margin-right: 2%;
+"><img src="image/conversation.png"><span style="margin-left: 1%;color:#B8B8B8;">1</span></span> <span><img src="image/export.png"></span> </div>
             </div>
         </div>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/JS/jquery.min.js"></script>
+    <script src="./JS/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
     </script>
-    <script src="/JS/bootstrap.min.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="/JS/holder.min.js"></script>
+    <script src="./JS/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/JS/ie10-viewport-bug-workaround.js"></script>
+    <script src="./JS/ie10-viewport-bug-workaround.js"></script>
 </body>
 
 </html>

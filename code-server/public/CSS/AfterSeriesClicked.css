@@ -1,0 +1,155 @@
+        h4 {
+            margin: 0px;
+        }
+        
+        header {
+            margin-top: 0;
+            margin-left: 10%;
+            margin-right: 10%;
+            height: 50px;
+            background-color: #fff;
+            background-color: #fff;
+        }
+        
+        .media {
+            margin-right: 10%;
+            margin-left: 10%;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            padding-right: 3%;
+            padding-left: 3%;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1), 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        .makePost {
+            background-color: #ffa000;
+            color: #fff;
+            float: right;
+            border: none;
+            width: 60px;
+            height: 30px;
+        }
+        
+        #userInfo-name {
+            margin-top: 5px;
+            font-size: 30px;
+        }
+        
+        .subHeader {
+            margin-bottom: 30px;
+            height: 50px;
+            background-color: #ffa000;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            padding-top: 12px;
+        }
+        
+        .subHeaderMenu {
+            margin-left: 5px;
+            margin-right: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .woodBg {
+            background-image: url(../image/typewriter-801921_1920.png);
+            background-size: 1300px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        
+        .userImage {
+            padding-top: 50px;
+        }
+        
+        .userName {
+            text-align: center;
+            color: #fff;
+        }
+        
+        .userOptionLayout {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .userOption {
+            font-size: medium;
+            color: #fff;
+            float: left;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-weight: 700;
+        }
+        
+        .longCardLayout {
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+        
+        .longCard {
+            margin: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 200px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .cardHeader {
+            padding-top: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #D7D7D7;
+        }
+        
+        .cardFooter {
+            height: 20px;
+        }
+        
+        .text {
+            margin-top: 10px;
+        }
+        
+        footer {
+            height: 100px;
+            background-color: #ffa000;
+        }
+        
+        @media(max-width: 767px) {
+            #profil {
+                height: 120px;
+            }
+            .userImage {
+                padding-top: 30px;
+            }
+            #userInfo-name {
+                margin-bottom: 0;
+            }
+            /*
+            .navbar-form navbar-left {
+                width: 100px;
+            }
+            .btn btn-default {
+                float: right;
+            }
+            .woodBg {
+                height: 150px;
+            }
+            .userImage {
+                height: 60px;
+            }
+            #profil {
+                display: block;
+                height: 30px;
+            }
+            #userInfo-name {
+                font-size: 15px;
+            }
+            .userImage {
+                padding-top: 20px;
+            }*/
+        }
+        
+        html {
+            min-width: 290px;
+        }

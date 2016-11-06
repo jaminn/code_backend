@@ -4,11 +4,22 @@ h4 {
 
 .subHeader {
     height: 50px;
-    background-color: #FD5830;
+    background-color: #ffa000;
     color: #fff;
     text-align: center;
     font-size: 18px;
     padding-top: 12px;
+}
+
+.series-card {
+    position: relative;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 3%;
+    padding-left: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .subHeaderMenu {
@@ -26,7 +37,7 @@ header {
 }
 
 .makePost {
-    background-color: #FD9F28;
+    background-color: #ffa000;
     color: #fff;
     float: right;
     border: none;
@@ -45,7 +56,7 @@ header {
 }
 
 .mainBtn {
-    background-color: #FD5830;
+    background-color: #ffa000;
     color: #fff;
     border: none;
     width: 140px;
@@ -58,7 +69,7 @@ header {
 
 .subHeader {
     height: 50px;
-    background-color: #FD5830;
+    background-color: #ffa000;
     color: #fff;
     text-align: center;
     font-size: 18px;
@@ -134,7 +145,7 @@ header {
 
 footer {
     height: 100px;
-    background-color: #FD9F28;
+    background-color: #ffa000;
 }
 
 .woodIn {
@@ -169,11 +180,13 @@ footer {
         padding: 0;
     }
 }
-@media(max-width : 480px){
-    #sumnail{
+
+@media(max-width: 480px) {
+    #sumnail {
         display: none
     }
 }
-html{
+
+html {
     min-width: 300px;
 }

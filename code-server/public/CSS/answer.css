@@ -1,6 +1,65 @@
         *:focus {
-        outline: none;
-    }
+            outline: none;
+        }
+        
+        @media (min-width: 768px) {
+            #wrap {
+                margin-right: 5%;
+                margin-left: 5%;
+            }
+        }
+        
+        .nav>li>a {
+            position: relative !important;
+            display: block !important;
+            padding: 10px 15px !important;
+        }
+        
+        .ghost-button {
+            color: #009688;
+            background: #fff;
+            border: 1px solid #009688;
+            font-size: 17px;
+            padding: 7px 12px;
+            font-weight: normal;
+            margin: 6px 0;
+            margin-right: 12px;
+            display: inline-block;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            min-width: 120px;
+        }
+        
+        .ghost-button:hover,
+        .ghost-button:active {
+            color: #fff !important;
+            border-color: #009688 !important;
+            background: #009688;
+        }
+        
+        .ghost-button-ok {
+            color: #ff7e5f;
+            background: #fff;
+            border: 1px solid #ff7e5f;
+            font-size: 17px;
+            padding: 7px 12px;
+            font-weight: normal;
+            margin: 6px 0;
+            margin-right: 12px;
+            display: inline-block;
+            text-decoration: none;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            min-width: 120px;
+        }
+        
+        .ghost-button-ok:hover,
+        .ghost-button-ok:active {
+            color: #fff !important;
+            border-color: #ff7e5f !important;
+            background: #ff7e5f !important;
+        }
+        
         header {
             margin-top: 0;
             margin-left: 10%;
@@ -25,11 +84,11 @@
             border: none;
             padding-top: 20px;
             height: 80px;
-            font-size: 30px;
+            font-size: 35px;
         }
         
         #text {
-            font-size: 15px;
+            font-size: 16px;
             height: 400px;
             border-right: none;
             border-left: none;
@@ -80,18 +139,12 @@
         textarea:active {
             /*    background-color: yellow;*/
         }
-    </style>
-    <!--edit tool-->
-    <style>
-        ul {
+        
+        </style> <!--edit tool--> <style> ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
-        }
-        
-        li {
-            float: left;
         }
         
         li a,

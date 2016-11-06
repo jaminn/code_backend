@@ -17,6 +17,7 @@ var ex = require('./routes/ex');
 var login = require('./routes/login');
 var board = require('./routes/board');
 var make = require('./routes/make');
+var version = require('./routes/version');
 
 var app = express();
 
@@ -52,6 +53,7 @@ app.use('/users', users);
 app.use('/board', board);
 app.use('/make', make);
 app.use('/ex', ex);
+app.use('/version', version);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
