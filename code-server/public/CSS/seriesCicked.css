@@ -1,0 +1,192 @@
+h4 {
+    margin: 0px;
+}
+
+.subHeader {
+    height: 50px;
+    background-color: #ffa000;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 12px;
+}
+
+.series-card {
+    position: relative;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 3%;
+    padding-left: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.subHeaderMenu {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header {
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 50px;
+    background-color: #fff;
+}
+
+.makePost {
+    background-color: #ffa000;
+    color: #fff;
+    float: right;
+    border: none;
+    width: 60px;
+    height: 30px;
+}
+
+.mainTitle {
+    text-align: center;
+    color: #fff;
+}
+
+.subTitle {
+    color: #fff;
+    text-align: center;
+}
+
+.mainBtn {
+    background-color: #ffa000;
+    color: #fff;
+    border: none;
+    width: 140px;
+    height: 40px;
+    font-size: 15px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.subHeader {
+    height: 50px;
+    background-color: #ffa000;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 12px;
+}
+
+.subHeaderMenu {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.woodBg {
+    height: 350px;
+    background-image: url(../image/typewriter-801921_1920.png);
+    background-size: 1300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.longCardLayout {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.longCard {
+    margin: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cardText {
+    float: left;
+}
+
+.cardImage {
+    display: inline-block;
+}
+
+.cardHeader {
+    font-size: 20px;
+}
+
+.cardBody {
+    color: #949494
+}
+
+.cardFooter {
+    margin-top: 20px;
+    color: #949494;
+    height: 20px;
+}
+
+#cardTime {
+    color: #949494;
+}
+
+#cardText {
+    color: #949494;
+}
+
+#cardEtc {
+    margin-top: 10px;
+    color: #949494;
+}
+
+footer {
+    height: 100px;
+    background-color: #ffa000;
+}
+
+.woodIn {
+    padding: 80px;
+}
+
+@media(max-width: 767px) {
+    .navbar-form navbar-left {
+        width: 100px;
+    }
+    .btn btn-default {
+        float: right;
+    }
+    .woodBg {
+        height: 200px;
+        padding: 30px;
+    }
+    .userImage {
+        height: 60px;
+    }
+    .subTitle {
+        padding: 10px;
+    }
+    h1 {
+        margin-top: 5px;
+        font-size: 25px;
+    }
+    .mainBtn {
+        margin-top: 0;
+    }
+    .woodIn {
+        padding: 0;
+    }
+}
+
+@media(max-width: 480px) {
+    #sumnail {
+        display: none
+    }
+}
+
+html {
+    min-width: 300px;
+}

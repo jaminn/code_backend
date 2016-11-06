@@ -1,0 +1,190 @@
+        *:focus {
+            outline: none;
+        }
+        
+        @media (min-width: 768px) {
+            #wrap {
+                margin-right: 5%;
+                margin-left: 5%;
+            }
+        }
+        
+        .nav>li>a {
+            position: relative !important;
+            display: block !important;
+            padding: 10px 15px !important;
+        }
+        
+        .ghost-button {
+            color: #009688;
+            background: #fff;
+            border: 1px solid #009688;
+            font-size: 17px;
+            padding: 7px 12px;
+            font-weight: normal;
+            margin: 6px 0;
+            margin-right: 12px;
+            display: inline-block;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            min-width: 120px;
+        }
+        
+        .ghost-button:hover,
+        .ghost-button:active {
+            color: #fff !important;
+            border-color: #009688 !important;
+            background: #009688;
+        }
+        
+        .ghost-button-ok {
+            color: #ff7e5f;
+            background: #fff;
+            border: 1px solid #ff7e5f;
+            font-size: 17px;
+            padding: 7px 12px;
+            font-weight: normal;
+            margin: 6px 0;
+            margin-right: 12px;
+            display: inline-block;
+            text-decoration: none;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            min-width: 120px;
+        }
+        
+        .ghost-button-ok:hover,
+        .ghost-button-ok:active {
+            color: #fff !important;
+            border-color: #ff7e5f !important;
+            background: #ff7e5f !important;
+        }
+        
+        header {
+            margin-top: 0;
+            margin-left: 10%;
+            margin-right: 10%;
+            height: 50px;
+            background-color: #fff;
+            background-color: #fff;
+        }
+        
+        textarea {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 60%;
+        }
+        
+        .editor-content {
+            text-align: center;
+        }
+        
+        #title {
+            border: none;
+            padding-top: 20px;
+            height: 80px;
+            font-size: 35px;
+        }
+        
+        #text {
+            font-size: 16px;
+            height: 400px;
+            border-right: none;
+            border-left: none;
+            border-color: #E6E6E6;
+        }
+        
+        #tag {
+            border: none;
+            height: 100px;
+        }
+        
+        #tagInfo {
+            text-align: left;
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
+        
+        #tagsubInfo {
+            margin-left: 10px;
+            font-size: 12px;
+            color: #A6A6A6;
+        }
+        
+        footer {
+            height: 100px;
+            background-color: #FD9F28;
+        }
+        
+        .makePost {
+            margin-left: 10px;
+            color: #fff;
+            float: right;
+            border: none;
+            width: 60px;
+            height: 30px;
+        }
+        
+        #save {
+            background-color: #fff;
+            color: #000;
+        }
+        
+        #upload {
+            background-color: #35B973;
+        }
+        
+        textarea:active {
+            /*    background-color: yellow;*/
+        }
+        
+        </style> <!--edit tool--> <style> ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #35B973;
+        }
+        
+        li.dropdown {
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
