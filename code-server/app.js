@@ -14,10 +14,14 @@ var store = sessionstore.createSessionStore();
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var ex = require('./routes/ex');
-var login = require('./routes/login');
-var board = require('./routes/board');
 var make = require('./routes/make');
 var version = require('./routes/version');
+var tutorial = require('./routes/tutorial');
+var qna = require('./routes/qna');
+var auth = require('./routes/auth');
+var dictionary = require('./routes/dictionary');
+var blog = require('./routes/blog');
+
 
 var app = express();
 
@@ -26,14 +30,101 @@ mongoose.connect('mongodb://localhost:27017/code');
 var db = mongoose.connection;
 
 var UserSchema = new mongoose.Schema({
-    email: { type : String, required:true, unique:true},
-    passwd: { type : String, required:true},
-    nickname: { type : String, required:true, unique:true},
-    Logined: {type: Boolean, required:true, default: false},
+    id: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    pw: {
+        type: String
+    },
+    userName: {
+        type: String,
+        unique: true
+    },
+    token: {
+        type: String
+    }
 });
 
-Users = mongoose.model('users',UserSchema);
 
+var DicSchema = new mongoose.Schema({
+    title: {type: String},
+    contents: {type: String},
+});
+
+var BoardSchema = new mongoose.Schema({
+    writer: {
+        type: String
+    },
+    token: {
+        type: String
+    },
+    title: {
+        type: String
+    },
+    contents: {
+        type: String
+    },
+    A: [{
+        title: {
+            type: String
+        },
+        A_contents: {
+            type: String
+        },
+        commant: [{
+
+        }]
+    }],
+    like: {
+        type: Number,
+        default: 0
+    },
+    dislike: {
+        type: Number,
+        default: 0
+    }
+});
+
+var QnABoardSchema = new mongoose.Schema({
+    writer: {
+        type: String
+    },
+    token: {
+        type: String
+    },
+    title: {
+        type: String
+    },
+    contents: {
+        type: String
+    },
+    A: [{
+        title: {
+            type: String
+        },
+        A_contents: {
+            type: String
+        },
+        commant: [{
+
+        }]
+    }],
+    like: {
+        type: Number,
+        default: 0
+    },
+    dislike: {
+        type: Number,
+        default: 0
+    }
+});
+
+Users = mongoose.model('users', UserSchema);
+QnABoards = mongoose.model('qnaboards', QnABoardSchema);
+Boards = mongoose.model('boards', BoardSchema);
+Dics = mongoose.model('dics', DicSchema);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,23 +134,33 @@ app.set('view engine', 'ejs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+    store: store,
+    secret: '엥엥',
+    saveUninitialized: true
+}));
 
 app.use('/', routes);
-app.use('/login', login);
 app.use('/users', users);
-app.use('/board', board);
 app.use('/make', make);
 app.use('/ex', ex);
 app.use('/version', version);
+app.use('/tutorial', tutorial);
+app.use('/qna', qna);
+app.use('/auth', auth);
+app.use('/dictionary', dictionary);
+app.use('/blog', blog);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 // error handlers
@@ -67,23 +168,23 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
+    app.use(function(err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err
+        });
     });
-  });
 }
 
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {}
+    });
 });
 
 
