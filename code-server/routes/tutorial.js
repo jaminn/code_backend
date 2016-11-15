@@ -9,8 +9,17 @@ router.get('/contents', function(req, res) {
     res.render('tutorial/tuto_contents');
 });
 
-router.get('/my', function(req, res) {
-    res.render('tutorial/tuto_my');
+router.get('/search', function(req, res) {
+    res.render('tutorial/tuto_search');
 });
+
+router.post('/search', function(req, res) {
+    res.render('tutorial/tuto_search');
+});
+
+
+// router.get('/my', function(req, res) {
+//     res.render('tutorial/tuto_my');
+// });
 
 module.exports = router;

@@ -16,6 +16,8 @@ router.post('/', function(req, res, next) {
         res.redirect('login');
     }
 
+    console.log(req.body);
+
     Users.findOne({
         "email": req.body.email,
         "passwd": req.body.passwd

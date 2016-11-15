@@ -21,19 +21,18 @@ var qna = require('./routes/qna');
 var auth = require('./routes/auth');
 var dictionary = require('./routes/dictionary');
 var blog = require('./routes/blog');
+var my = require('./routes/my');
 
 
 var app = express();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/code');
+mongoose.connect('mongodb://localhost:27017/testcode');
 var db = mongoose.connection;
 
 var UserSchema = new mongoose.Schema({
-    id: {
-        type: String,
-        required: true,
-        unique: true
+    userid: {
+        type: String, required: true, unique: true
     },
     pw: {
         type: String
@@ -65,27 +64,8 @@ var BoardSchema = new mongoose.Schema({
     },
     contents: {
         type: String
-    },
-    A: [{
-        title: {
-            type: String
-        },
-        A_contents: {
-            type: String
-        },
-        commant: [{
-
-        }]
-    }],
-    like: {
-        type: Number,
-        default: 0
-    },
-    dislike: {
-        type: Number,
-        default: 0
     }
-});
+  });
 
 var QnABoardSchema = new mongoose.Schema({
     writer: {
@@ -100,25 +80,20 @@ var QnABoardSchema = new mongoose.Schema({
     contents: {
         type: String
     },
-    A: [{
-        title: {
-            type: String
-        },
-        A_contents: {
-            type: String
-        },
-        commant: [{
+    date: {type: String},
 
-        }]
-    }],
-    like: {
-        type: Number,
-        default: 0
-    },
-    dislike: {
-        type: Number,
-        default: 0
-    }
+    A: [{
+      writer: {
+          type: String
+      },
+      title: {
+          type: String
+      },
+      contents: {
+          type: String
+      },
+      date: {type: String}
+    }]
 });
 
 Users = mongoose.model('users', UserSchema);
@@ -155,6 +130,7 @@ app.use('/qna', qna);
 app.use('/auth', auth);
 app.use('/dictionary', dictionary);
 app.use('/blog', blog);
+app.use('/my', my);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

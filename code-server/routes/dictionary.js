@@ -6,10 +6,18 @@ router.get('/contents', function(req, res) {
 });
 
 router.get('/', function(req, res) {
-    res.render('dictionary/dic_front');
+    if(req.session.nickname){
+      res.render('dictionary/dic_front', {nickname: req.session.nickname});
+    }else{
+      res.render('dictionary/dic_front', {nickname: null});
+    }
 });
 
-router.get('/write', function(req, res) {
+router.get('/search', function(req, res) {
+    res.render('dictionary/dic_search');
+});
+
+router.post('/search', function(req, res) {
     res.render('dictionary/dic_search');
 });
 
