@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/image/logo.png">
+    <title>CODINATION</title>
+    <link href="/CSS/navbar.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
+    <!--    textarea 등-->
+    <link href="/CSS/answer.css" rel="stylesheet">
+    <style>
+        .navbar-nav>li>a {
+            text-align: left;
+        }
+
+        .navbar-nav>li>a {
+            color: #777 !important;
+        }
+
+        #bs-example-navbar-collapse-1 {
+            background-color: whitesmoke;
+        }
+
+        @media (max-width: 720px) {
+            .answer {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" style="    border: 0px;    background-color: #fff;    margin-bottom: 0px;">
+        <div class="container" style="    width: 100%;    padding: 0;    margin: 0;">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header" style="    margin: 0;    width: 100%;    background: #ffa000;">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="    margin-left: 15px;    float: left;    margin-right: 0;">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" style="    margin-left: 5px;    color: #fff;" href="/">CODINATION</a>
+                <form action="/qna/search" method="post" class="navbar-form navbar-right" style="    border-radius: 3px;    padding: 0;    background-color: #fff;    float: right;    margin-right: 3%;    ">
+                    <div class="form-group" style="width: calc(100% - 40px);    margin-bottom: 0;    display: inline-block;    background-color: white;">
+                      <input type="text" id="searchBar" name="searchBar" class="form-control" placeholder="Search" style="width: 100%;border: none;"> </div>
+                      <button type="submit" class="btn btn-default" style="    float: right;    border: none;   height: 34px;">
+                        <img src="/image/search.png" style="    width: 15px;    height: 15px;">
+                      </button>
+                </form>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="background: whitesmoke; padding-left: 30px; border: 10px; height: 0px;">
+                <ul class="nav navbar-nav">
+                    <span></span>
+                    <li><a href="/tutorial">튜토리얼 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="/dictionary">사전</a></li>
+                    <li class="active"><a href="/qna">Q&amp;A</a></li>
+                    <li><a href="/blog">블로그</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/my/profile"><img src="/image/user.png" style="height: 20px;margin-right: 5px;">구자민 </a>
+                    </li>
+                    <li><a href="/qna_edit">질문하기</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="qna-container" style="margin-top: 60px;margin-bottom: 60px;margin-left: 10%;margin-right: 10%;">
+        <div style="border-color: #EAEAEA; border-style: solid;">
+            <div style="margin-left: 5%;margin-right: 5%;margin-top: 20px;">
+                <div style="font-size: 15px;padding-bottom: 10px;">전체</div>
+                <% if (qnas != null){  for(var i = 0; i<qnas.length; i++){  %>
+                    <div style="border-top-style: solid;border-width: 1px;border-color: #EAEAEA;">
+                        <div style="margin-bottom: 20px;">
+                            <div>
+                                <a href="/qna/contents" style="font-size: 30px;">
+                                    <%= qnas[i].title%>
+                                </a> <span style="margin-left: 5px;"><%= qnas[i].date%></span> </div>
+                            <div class="media">
+                                <div class="media-body">
+                                  <a href= <%="/qna/contents?token=" +qnas[i].token %>><%= String(qnas[i].contents).replace(/<[\s\S]*?>/g,"").substring(0,200)+"..." %> </a></div>
+                                <div class="media-right">
+                                    <a href="#">
+                                        <div class="answer" style="color: #696969;border-width: 2px;border-color: #EAEAEA;border-style: solid;border-radius: 50%;padding: 15px;text-align: center;">
+                                          <span style="font-size: 20px;"><%= qnas[i].A.length%></span> <br>answer
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="margin-top: 5px;">
+                              <img src="/image/user.png" style="width: 20px;height: 20px;">
+                              <span style="margin-left: 5px;"><%=qnas[i].writer%></span>
+                            </div>
+                        </div>
+                    </div>
+                    <%}}%>
+            </div>
+            <!-- <nav aria-label="..." style="text-align: center;/* border: none; */">                <ul class="pagination pagination-sm">                    <li class="page-item">                        <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span> </a>                    </li>                    <li class="page-item"><a class="page-link" href="#">1</a></li>                    <li class="page-item"><a class="page-link" href="#">2</a></li>                    <li class="page-item"><a class="page-link" href="#">3</a></li>                    <li class="page-item">                        <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span> </a>                    </li>                </ul>            </nav>             -->
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/JS/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+
+    </script>
+    <script src="/JS/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="/JS/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/JS/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>

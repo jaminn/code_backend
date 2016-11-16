@@ -1,0 +1,88 @@
+<html><head>
+    <title>Realtime Markdown Viewer</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="/JS/jquery.min.js"></script>
+    <script>
+    function post_markdown(){
+      $.post("/blogGot", { content: $("#markdown").html() } );
+    }
+    </script>
+    <script>
+function goBack() {
+    window.history.back();
+}
+</script>
+</head>
+
+<body class="container-fluid" style="
+    overflow: hidden;
+    padding: 0;
+">
+
+            <nav class="navbar navbar-default" style="width: 100%;float: left;border: 0px;background-color: #fff;margin-bottom: 0px;">
+                <div class="container" style="width: 100%;padding: 0;margin: 0;">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header" style="float: left;margin: 0;/* margin-top: 40px; */width: 100%;background: #ffa000;">
+
+                        <a class="navbar-brand" style="margin-left: 5px;color: #fff;" href="/">Blog Edit</a>
+  <button class="navbar-brand" onclick="post_markdown()" style="margin-left: 5px;color: #fff;float: right;background-color: transparent;border: 0;" href="/" onclick="goBack()">저장</button>
+  <a class="navbar-brand" style="background: #aaa;margin-left: 5px;color: #fff;float: right;" href="/" onclick="goBack()">취소</a>
+                    </div>
+
+
+
+                </div>
+            </nav>
+    <section class="row" style="
+    margin: 0;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    padding-bottom: 0;
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    padding-top: 50px;
+">
+        <textarea class="col-md-6 full-height" id="pad" style="
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    float: left;
+"># Realtime Markdown Editor
+
+### What is this?
+
+Type your markdown into the box on the left and immediately see if on the box on the right. If you send a friend a link to a pad URL (other than the home page) you both can edit the document at the same time!
+
+### How to use this?
+
+Type anything after the slash in "https://realtimemarkdown.herokuapp.com/" and just start creating markdown. If you don't feel typing in the address bar, feel free to go to one of these markdown pads:
+
+- [https://realtimemarkdown.herokuapp.com/sample](https://realtimemarkdown.herokuapp.com/sample)
+- [https://realtimemarkdown.herokuapp.com/my_project](https://realtimemarkdown.herokuapp.com/my_project)
+- [https://realtimemarkdown.herokuapp.com/whatever](https://realtimemarkdown.herokuapp.com/whatever)
+
+### How was this built?
+
+This website uses the following to work:
+
+ - [Markdown](https://github.com/showdownjs/showdown) - Converts markdown text to beautiful HTML
+ - [ShareJS](http://sharejs.org/) - allows for realtime editing of this textbox
+ - [Node.js](https://nodejs.org/) - backend framework
+ - [Redis](http://redis.io/) - where we store our markdown documents
+ - [Twitter Bootstrap](http://getbootstrap.com/) - makes everything a little prettier
+        </textarea>
+        <div class="col-md-6 full-height" id="markdown" style="
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    float: left;
+"></div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.4.4/showdown.min.js"></script>
+    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.0.2/dist/showdown.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

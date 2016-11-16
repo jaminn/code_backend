@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://getbootstrap.com/examples/dashboard/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/image/fav.png">
+    <title>CODINATION</title>
+    <link href="/CSS/navbar.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
+    <!--    textarea 등-->
+    <link href="/CSS/answer.css" rel="stylesheet">
+    
+    <style>
+        #bs-example-navbar-collapse-1{
+            background-color: whitesmoke;
+        }
+        .nav>li>a {
+            text-align: left !important;
+            position: relative !important;
+            display: block !important;
+            padding: 10px 15px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" style="
+    border: 0px;
+    background-color: #fff;
+    margin-bottom: 0px;
+">
+        <div class="container" style="
+    width: 100%;
+    padding: 0;
+    margin: 0;
+">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header" style="
+    margin: 0;
+    width: 100%;
+    background: #ffa000;
+">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="
+    margin-left: 15px;
+    float: left;
+    margin-right: 0;
+
+"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand"style="
+    margin-left: 5px;
+    color: #fff;
+" href="/"><span></span>
+                CODINATION
+                </a>
+                <form class="navbar-form navbar-right" style="
+    border-radius: 3px;
+    padding: 0;
+    background-color: #fff;
+    float: right;
+    margin-right: 3%;
+    ">
+                    <div class="form-group" style="
+    width: calc(100% - 40px);
+    margin-bottom: 0;
+    display: inline-block;
+    background-color: white;
+">
+                        <input type="text" class="form-control" placeholder="Search" style="width: 100%;border: none;"> </div>
+                    <button type="submit" class="btn btn-default" style="
+    float: right;
+    border: none;
+    height: 34px;
+"> <img src="/image/search.png" style="
+    width: 15px;
+    height: 15px;
+"></button>
+                </form>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="background: whitesmoke; padding-left: 30px; border: 10px; height: 0px;">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/tutorial">튜토리얼 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="/dictionary">사전</a></li>
+                            <li class="active"><a href="/qna">Q&amp;A</a></li>
+                            <li><a href="/blog">블로그</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="/blog/profile"><img src="/image/user.png" style="
+    height: 20px;
+    margin-right: 5px;
+">구자민 </a>
+                            </li>
+                            <li><a href="qna_answer.html">질문하기</a></li>
+                        </ul>
+                    </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="qna-container" style="
+    /* margin: 10%; */
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
+">
+        <div style="border-color: #EAEAEA; border-style: solid;padding: 40px;">
+            <div class="end_question  _end_wrap_box">
+                <!-- 타이틀 -->
+                <table>
+                    <tr>
+                        <td rowspan="2">
+                            <div style="
+    color: #fff;
+    text-align: center;
+    width: 60px;
+    height:60px;
+    background-color:#ffa000;
+    margin-right: 20px;
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 10px;
+    ">Q</div>
+                        </td>
+                        <td>
+                            <h3 style="
+    margin: 0;
+">asdf</h3></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/image/user.png" style="
+    width: 20px;
+    margin-right: 5px;
+">구자민</td>
+                        <td style="
+    width: 10px;
+"></td>
+                        <td>2000.00.00</td>
+                    </tr>
+                </table>
+                <!-- 컨텐츠 -->
+                <div class="_endContentsText" style="margin-top: 20px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> 나의 시가 그대의 자유를 억압한다면 나는 더 이상 시를 쓰지 않으리라 나의 사랑이 그대의 슬픔을 키운다면 나는 그 어떤 사랑도 꿈꾸지 않으리라 나의 고독이 음악 하나 만들지 못한다면 나는 고독의 손톱마져 뽑아버리리라 그러니 눈발이여, 지금 이 거리로 착륙해오는 차갑고도 뜨거운 불멸의 반가사유여, 그대들은 부디 아름다운 시절에 살기를 </div>
+            </div>
+            <div id="qna_detail_question_commentAndMenu">
+                <div class="btn_wrap" style="
+    margin-top: 50px;
+">
+                    <!--                            float: right;--><a href="#" style="
+    color: white;
+    background-color: #ffa000;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+">답변하기</a> </div>
+            </div>
+        </div>
+        <div style="
+    margin-top: 50px;
+"> 총 <span style="
+    font-size: 20px;
+    color: #ffa000;
+">1</span><span style="
+    font-size: 20px;
+    color: #ffa000;
+">개</span>의 답변이 있습니다. </div>
+        <div style="border-color: #EAEAEA; border-style: solid;padding: 40px;">
+            <div class="end_question  _end_wrap_box">
+                <!-- 타이틀 -->
+                <table>
+                    <tr>
+                        <td rowspan="2">
+                            <div style="
+    color: #fff;
+    text-align: center;
+    width: 60px;
+    height:60px;
+    background-color:#75D557;
+    margin-right: 20px;
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 10px;
+    ">A</div>
+                        </td>
+                        <td>
+                            <h3 style="
+    margin: 0;
+">asdf</h3></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/image/user.png" style="
+    width: 20px;
+    margin-right: 5px;
+">구자민</td>
+                        <td style="
+    width: 10px;
+"></td>
+                        <td>2000.00.00</td>
+                    </tr>
+                </table>
+                <!-- 컨텐츠 -->
+                <div class="_endContentsText" style="margin-top: 20px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> 나의 시가 그대의 자유를 억압한다면 나는 더 이상 시를 쓰지 않으리라 나의 사랑이 그대의 슬픔을 키운다면 나는 그 어떤 사랑도 꿈꾸지 않으리라 나의 고독이 음악 하나 만들지 못한다면 나는 고독의 손톱마져 뽑아버리리라 그러니 눈발이여, 지금 이 거리로 착륙해오는 차갑고도 뜨거운 불멸의 반가사유여, 그대들은 부디 아름다운 시절에 살기를 </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/JS/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="/JS/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="/JS/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/JS/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
