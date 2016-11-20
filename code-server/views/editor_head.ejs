@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Dictionary</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/CSS/style.css" rel="stylesheet">
+    <script src="/JS/jquery.min.js"></script>
+    <script src="/JS/purl.js"></script>
+    <script>
+        function post_markdown() {
+            $.post("./edit", {
+                title: $("#title").html(),
+                mode: $.url().param('mode'),
+                token: $.url().param('token'),
+                content: $("#markdown").html()
+            }, function(result) {
+                alert(result);
+                if (result) {
+                    if (location.href === document.referrer || !document.referrer) {
+                        location.href = "/";
+                        alert("same");
+                    } else {
+                        location.href = document.referrer;
+                    }
+                }
+            });
+        }
+
+    </script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
+</head>
+
+<body class="container-fluid" style="    overflow: hidden;    padding: 0;">
+
+    <nav class="navbar navbar-default" style="width: 100%;float: left;border: 0px;background-color: #fff;margin-bottom: 0px;">
+        <div class="container" style="width: 100%;padding: 0;margin: 0;">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header" style="float: left;margin: 0;/* margin-top: 40px; */width: 100%;background: #ffa000;">
+
+                <h1 class="navbar-brand" style="margin: 0;margin-left: 10px;padding-right: 0;color: #fff;">Title:</h1>
+                <h1 id="title" class="navbar-brand" style="margin: 0;color: #fff;padding-left: 10px;" contenteditable="true">제목을 입력하세요.</h1>
+                <button class="navbar-brand" onclick="post_markdown()" style="margin-left: 5px;color: #fff;float: right;background-color: transparent;border: 0;">저장</button>
+                <a class="navbar-brand" style="background: #aaa;margin-left: 5px;color: #fff;float: right;" href="/" onclick="goBack()">취소</a>
+            </div>
+
+
+
+        </div>
+    </nav>
+    <section class="row" style="    margin: 0;    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    padding-bottom: 0;    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    padding-top: 50px;">
+        <textarea class="col-md-6 full-height" id="pad" style="    padding-top: 10px;    padding-bottom: 10px;    width: 50%;    float: left;">

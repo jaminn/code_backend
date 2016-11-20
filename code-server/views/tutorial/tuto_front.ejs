@@ -1,242 +1,120 @@
-<html lang="en"><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/image/logo.png">
-    <title></title>
-    <link href="/CSS/navbar.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="/CSS/offcanvas.css" rel="stylesheet">
-    <style>
-        .navbar-nav>li>a {
-            color: #777 !important;
-        }
+<html lang="en">
 
-        #bs-example-navbar-collapse-1 {
-            background-color: whitesmoke;
-        }
+<head>
+    <%- include('../load'); %>
+        <style>
+            .navbar-nav>li>a {
+                color: #777 !important;
+            }
+            
+            #bs-example-navbar-collapse-1 {
+                background-color: whitesmoke;
+            }
+            
+            .img-fluid {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .jumbotron {}
+            
+            .media-middle {
+                padding-right: 20px;
+            }
 
-        .img-fluid {
-            width: 150px;
-            height: 150px;
-        }
-
-        .jumbotron {}
-
-        .media-middle {
-            padding-right: 20px;
-        }
-    </style>
+        </style>
 </head>
 
 <body style="padding-top: 0;background-color: #F5F5F5;">
-    <nav class="navbar navbar-default" style="border: 0px;background-color: #fff;margin-bottom: 0px;">
-        <div class="container" style="width: 100%;padding: 0;margin: 0;">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header" style="margin: 0;width: 100%;background: #ffa000;">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="margin-left: 15px;float: left;margin-right: 0;">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/" style="margin-left: 5px;color: #fff;">
-                    <span></span> CODINATION
-                </a>
-                <form action="/tutorial/search" method="post" class="navbar-form navbar-right" style="
-    border-radius: 3px;
-    padding: 0;
-    background-color: #fff;
-    float: right;
-    margin-right: 3%;
-    ">
-                    <div class="form-group" style="
-    width: calc(100% - 40px);
-    margin-bottom: 0;
-    display: inline-block;
-    background-color: white;
-">
-                        <input type="text" id="searchBar" name="searchBar" class="form-control" placeholder="Search" style="width: 100%;border: none;"> </div>
-                    <button type="submit" class="btn btn-default" style="
-    float: right;
-    border: none;
-   height: 34px;
-"> <img src="/image/search.png" style="
-    width: 15px;
-    height: 15px;
-"></button>
-                </form>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="padding-left: 30px;border: 10px;">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/tutorial"> 튜토리얼 </a></li>
-                    <li><a href="/dictionary">사전</a></li>
-                    <li><a href="/qna">Q&amp;A</a></li>
-                    <li><a href="/blog">블로그<span class="sr-only">(current)</span></a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/my/profile"><img src="/image/user.png" style="height: 20px;margin-right: 5px;">구자민 </a>
-                    </li>
-                    <li><a href="/blog_edit">글쓰기</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-    </nav>
-    <!-- /.navbar -->
-    <div class="container">
-        <div class="jumbotron" style="margin-top: 15px;padding-right: 25px;padding-left: 25px;padding-top: 15px;background-color: #fff;">
-            <div class="jumbotron" style="margin: 0;padding: 0;background-color: #fff;">
-                <div>
-                    <p>추천 강좌</p>
-                    <div class="row">
-                        <div class="col-xs-4" style="padding: 10px;/* padding: 0; */text-align: center;">
-                            <div style="
-    position: relative;
-    overflow: hidden;
-    height: 150px;
-    background-color: #fff;
-    margin: 10px;
-"><a href="/tutorial/contents"><img src="http://nv1.tveta.naver.net/libs/1134/1134285/20161107115323-jlzVdRlK.png" alt="Responsive image" style="
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    position: absolute;
-    margin: auto;
-    height: 100%;
-    width: auto;
-  " class="img-rounded"></a></div>
-                            <div><a href="/tutorial/contents">css 기초강좌</a></div>
-                        </div>
-
-
-
-                    <div class="col-xs-4" style="padding: 10px;text-align: center;">
-                            <div style="
-    position: relative;
-    overflow: hidden;
-    height: 150px;
-    background-color: #fff;
-    margin: 10px;
-"><img src="http://nv1.tveta.naver.net/libs/1134/1134285/20161107115323-jlzVdRlK.png" alt="Responsive image" style="
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    position: absolute;
-    margin: auto;
-    height: 100%;
-    width: auto;
-  " class="img-rounded"></div>
-                            <div>css 기초강좌</div>
-                        </div><div class="col-xs-4" style="padding: 10px;text-align: center;">
-                            <div style="
-    position: relative;
-    overflow: hidden;
-    height: 150px;
-    background-color: #fff;
-    margin: 10px;
-"><img src="http://nv1.tveta.naver.net/libs/1134/1134285/20161107115323-jlzVdRlK.png" alt="Responsive image" style="
-    top: -9999px;
-    bottom: -9999px;
-    left: -9999px;
-    right: -9999px;
-    position: absolute;
-    margin: auto;
-    height: 100%;
-    width: auto;
-  " class="img-rounded"></div>
-                            <div>css 기초강좌</div>
-                        </div></div>
+    <%- include('../navbar', {search_on: true,active:1,page:"/tutorial/search"}); %>
+        <!-- /.navbar -->
+        <div class="container">
+            <div class="jumbotron" style="margin-top: 15px;padding-right: 25px;padding-left: 25px;padding-top: 15px;background-color: #fff;">
+                <p>추천 강좌</p>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-4">
+                        <div style="    position: relative;    overflow: hidden;    height: 150px;    background-color: #fff;    margin: 10px;"><img src="https://i.ytimg.com/vi/Wz2klMXDqF4/hqdefault.jpg" alt="Responsive image" style="    top: -9999px;    bottom: -9999px;    left: -9999px;    right: -9999px;    position: absolute;    margin: auto;    height: 100%;    width: auto;  " class="img-rounded"></div>
+                        <h3>CSS 기초강좌</h3>
+                        <p style="    font-size: 15px;">CSS는 옷과 액세서리 같은 꾸미는 역할을 담당합니다. 간단한 CSS로 아름다운 웹사이트를 만들어봅시다</p>
+                        <p><a class="btn btn-default" href="/tutorial/contents" role="button">강좌 보러가기 »</a></p>
+                    </div>
+                    <!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <div style="    position: relative;    overflow: hidden;    height: 150px;    background-color: #fff;    margin: 10px;"><img src="http://nv1.tveta.naver.net/libs/1134/1134285/20161107115323-jlzVdRlK.png" alt="Responsive image" style="    top: -9999px;    bottom: -9999px;    left: -9999px;    right: -9999px;    position: absolute;    margin: auto;    height: 100%;    width: auto;  " class="img-rounded"></div>
+                        <h3>CSS 기초강좌</h3>
+                        <p style="    font-size: 15px;">CSS는 옷과 액세서리 같은 꾸미는 역할을 담당합니다. 간단한 CSS로 아름다운 웹사이트를 만들어봅시다</p>
+                        <p><a class="btn btn-default" href="/tutorial/contents" role="button">강좌 보러가기 »</a></p>
+                    </div>
+                    <!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <div style="    position: relative;    overflow: hidden;    height: 150px;    background-color: #fff;    margin: 10px;"><img src="http://nv1.tveta.naver.net/libs/1134/1134285/20161107115323-jlzVdRlK.png" alt="Responsive image" style="    top: -9999px;    bottom: -9999px;    left: -9999px;    right: -9999px;    position: absolute;    margin: auto;    height: 100%;    width: auto;  " class="img-rounded"></div>
+                        <h3>CSS 기초강좌</h3>
+                        <p style="    font-size: 15px;">CSS는 옷과 액세서리 같은 꾸미는 역할을 담당합니다. 간단한 CSS로 아름다운 웹사이트를 만들어봅시다</p>
+                        <p><a class="btn btn-default" href="/tutorial/contents" role="button">강좌 보러가기 »</a></p>
+                    </div>
+                    <!-- /.col-lg-4 -->
                 </div>
-            </div>
-        </div>
-        <div class="row row-offcanvas row-offcanvas-right">
-            <div class="col-sm-9">
 
-                <div class="jumbotron" style="padding-right: 25px;padding-left: 25px;padding-top: 15px;background-color: #fff;/* margin: 0; */">
-                    <div>
-                        <p>내 강좌</p>
-                        <div style="margin-bottom: 30px;">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <a href="/tutorial/contents"> <img class="media-object" src="/image/python.png" alt="Generic placeholder image" style="width: 140px;height: 140px;"> </a>
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><a href="/tutorial/contents">단기간 공부로 파이썬 마스터하기</a></h4>
-                                    <div style="color: grey;">오정식</div>
-                                    <div style="margin-top: 30px;color: gray;">2000.00.00</div>
-                                </div>
-                                <div class="media-right media-middle">
-                                    <button type="button" class="btn btn-default"><a href="/tutorial/contents">Go to course</a></button>
+            </div>
+            <div class="row row-offcanvas row-offcanvas-right">
+                <div class="col-sm-9">
+                    <div class="jumbotron" style="padding-right: 25px;padding-left: 25px;padding-top: 15px;background-color: #fff;/* margin: 0; */">
+                        <div>
+                            <p><a href="/tutorial/my">내 강좌</a></p>
+                            <div style="margin-bottom: 30px;">
+                                <div class="row featurette">
+                                    <div class="col-md-7 col-md-push-5">
+                                        <h2 class="featurette-heading" style="    font-size: 25px;">단기간 공부로 파이썬 마스터하기<br> </h2>
+                                        <h4>
+                                            <div class="text-muted">오정식</div>
+                                        </h4>
+                                        <h5>
+                                            <div class="text-muted">2016.8.15</div>
+                                        </h5>
+                                        <p style="    font-size: 15px;">초보자들도 쉽게 따라할 수 있는 다양한 예제로 파이썬을 마스터 해봅시다</p>
+                                        <div>
+
+                                            <button style="    margin-bottom: 10px;" type="button" class="btn btn-default" onclick="location.href='tutorial/contents';">Go to course</button></div>
+                                    </div>
+
+                                    <div class="col-md-5 col-md-pull-7"> <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="/image/python.png" data-holder-rendered="true"> </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="media" style="">
-                                <div class="media-left media-middle">
-                                    <a href="#">
-                                        <img class="media-object" src="/image/python.png" alt="Generic placeholder image" style="width: 140px;height: 140px;">
-                                    </a>
+                            <div style="margin-bottom: 30px;">
+                                <div class="row featurette">
+                                    <div class="col-md-7 col-md-push-5">
+                                        <h2 class="featurette-heading" style="    font-size: 25px;">단기간 공부로 파이썬 마스터하기<br> </h2>
+                                        <h4>
+                                            <div class="text-muted">오정식</div>
+                                        </h4>
+                                        <h5>
+                                            <div class="text-muted">2016.8.15</div>
+                                        </h5>
+                                        <p style="    font-size: 15px;">초보자들도 쉽게 따라할 수 있는 다양한 예제로 파이썬을 마스터 해봅시다</p>
+                                        <div>
+
+                                            <button onclick="location.href='/tutorial/contents';" style="    margin-bottom: 10px;" type="button" class="btn btn-default">Go to course</button></div>
+                                    </div>
+
+                                    <div class="col-md-5 col-md-pull-7"> <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="/image/python.png" data-holder-rendered="true"> </div>
                                 </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">단기간 공부로 파이썬 마스터하기</h4>
-                                    <div style="color: grey;">오정식</div>
-                                    <div style="margin-top: 30px;color: gray;">2000.00.00</div>
-                                </div>
-                                <div class="media-right media-middle">
-                                    <button type="button" class="btn btn-default">Go to course</button>
-                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--/.col-xs-12.col-sm-9-->
-            <div class=" col-sm-3 " id="sidebar" style="padding-top: 10px;background-color: #fff;padding-bottom: 10px;">
-                <div style="padding-bottom: 10px;border-bottom-style: solid;border-width: 1px;border-color: #EDEDED;">
-                    <span>
+                <!--/.col-xs-12.col-sm-9-->
+                <div class=" col-sm-3 " id="sidebar" style="padding-top: 10px;background-color: #fff;padding-bottom: 10px;">
+                    <div style="padding-bottom: 10px;border-bottom-style: solid;border-width: 1px;border-color: #EDEDED;"> <span>
                     <img src="/image/user.png" style="margin-right: 10px;"></span><span style="font-size: large;">구자민</span></div>
-                <!-- <div style="margin-top: 10px;">
-                    <button type="button" class="btn btn-default" style="
-    margin-bottom: 10px;
-    width: 100%;
-">java 심화강좌</button>
-                    <button type="button" class="btn btn-default" style="
-    margin-bottom: 10px;
-    width: 100%;
-">java 심화강좌</button>
-                    <button type="button" class="btn btn-default" style="
-    margin-bottom: 10px;
-    width: 100%;
-">java 심화강좌</button>
-
-                </div> -->
+                    <div style="margin-top: 10px;">
+                        <button onclick="location.href='tutorial/contents';" type="button" class="btn btn-default" style="    margin-bottom: 10px;    width: 100%;">java 심화강좌</button>
+                        <button onclick="location.href='tutorial/contents';" type="button" class="btn btn-default" style="    margin-bottom: 10px;    width: 100%;">java 심화강좌</button>
+                        <button onclick="location.href='tutorial/contents';" type="button" class="btn btn-default" style="    margin-bottom: 10px;    width: 100%;">java 심화강좌</button>
+                    </div>
+                </div>
             </div>
-            <!--/.sidebar-offcanvas-->
         </div>
-        <!--/row-->
-        <!--/.container-->
-        <!-- Bootstrap core JavaScript
-    ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="/JS/jquery.min.js"></script>
-        <script>
-            window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
-        </script>
-        <script src="/JS/bootstrap.min.js"></script>
-        <script src="/JS/offcanvas.js"></script>
-    </div>
+</body>
 
-
-
-
-</body></html>
+</html>

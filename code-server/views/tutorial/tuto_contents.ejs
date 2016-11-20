@@ -2,125 +2,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/image/logo.png">
-    <title>CODINATION</title>
-    <link href="/CSS/navbar.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
-    <!--    추가 css-->
-    <link href="/CSS/blogUpload.css" rel="stylesheet">
-    
-    <title>Simple Sidebar - Start Bootstrap Template</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="/CSS/simple-sidebar.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
+    <%- include("../load"); %>
+        <!--  추가 css-->
+        <link href="/CSS/blogUpload.css" rel="stylesheet">
+        <link href="/CSS/simple-sidebar.css" rel="stylesheet">
+        <style>
+            #bs-example-navbar-collapse-1 {
+                background-color: whitesmoke;
+            }
+            
+            .navbar-nav>li>a {
+                color: #777 !important;
+            }
 
-        #bs-example-navbar-collapse-1{
-            background-color: whitesmoke;
-        }
-        .navbar-nav>li>a {
-            color: #777 !important;
-        }
-    </style>
+        </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-default" style="
-    border: 0px;
-    background-color: #fff;
-    margin-bottom: 0px;
-">
-        <div class="container" style="
-    width: 100%;
-    padding: 0;
-    margin: 0;
-">
+    <nav class="navbar navbar-default" style="  border: 0px;  background-color: #fff;  margin-bottom: 0px;">
+        <div class="container" style="  width: 100%;  padding: 0;  margin: 0;">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header" style="
-    margin: 0;
-    width: 100%;
-    background:#ffa000;
-">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="
-    margin-left: 15px;
-    float: left;
-    margin-right: 0;
-"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" style="
-    margin-left: 5px;
-    color: #fff;
-" href="/"><span></span>
-                CODINATION
+            <div class="navbar-header" style="  margin: 0;  width: 100%;  background:#ffa000;">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="  margin-left: 15px;  float: left;  margin-right: 0;"> 
+                    <span class="sr-only">Toggle navigation</span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                </button>
+                <a class="navbar-brand" style="  margin-left: 5px;  color: #fff;" href="/">
+                    <span></span>CODINATION
                 </a>
-                <form class="navbar-form navbar-right" style="
-    border-radius: 3px;
-    padding: 0;
-    background-color: #fff;
-    float: right;
-    margin-right: 3%;
-    ">
-                    <div class="form-group" style="
-    width: calc(100% - 40px);
-    margin-bottom: 0;
-    display: inline-block;
-    background-color: white;
-">
-                        <input type="text" class="form-control" placeholder="Search" style="width: 100%;border: none;"> </div>
-                    <button type="submit" class="btn btn-default" style="
-    float: right;
-    border: none;
-  height: 34px;
-"> <img src="/image/search.png" style="
-    width: 15px;
-    height: 15px;
-"></button>
+                <form class="navbar-form navbar-right" style="  border-radius: 3px;  padding: 0;  background-color: #fff;  float: right;  margin-right: 3%;  ">
+                    <div class="form-group" style="  width: calc(100% - 40px);  margin-bottom: 0;  display: inline-block;  background-color: white;"> <input type="text" class="form-control" placeholder="Search" style="width: 100%;border: none;"> </div>
+                    <button type="submit" class="btn btn-default" style="  float: right;  border: none; height: 34px;"> 
+                        <img src="/image/search.png" style="  width: 15px;  height: 15px;">
+                    </button>
                 </form>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="background: whitesmoke; padding-left: 30px; border: 10px; height: 0px;">
-                        <ul class="nav navbar-nav">
-                            <li  class="active"><a href="/tutorial">튜토리얼 <span class="sr-only">(current)</span></a></li>
-                            <li><a href="/dictionary">사전</a></li>
-                            <li><a href="/qna">Q&amp;A</a></li>
-                            <li><a href="/blog">블로그</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="/blog/profile"><img src="/image/user.png" style="
-    height: 20px;
-    margin-right: 5px;
-">구자민 </a>
-                            </li>
-                            <li><a href="/tuto_edit">글쓰기</a></li>
-                        </ul>
-                    </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/tutorial">튜토리얼 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="/dictionary">사전</a></li>
+                    <li><a href="/qna">Q&amp;A</a></li>
+                    <li><a href="/blog">블로그</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/blog/profile"><img src="/image/user.png" style="  height: 20px;  margin-right: 5px;">구자민 </a>
+                    </li>
+                    <li><a href="/tutorial/edit">글쓰기</a></li>
+                </ul>
+            </div>
             <!-- /.navbar-collapse -->
         </div>
     </nav>
-    <div id="wrapper">
+    <div id="wrapper" class="">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand"> <a href="#">
-                        #Javascript 기초
-                    </a> <a href="/tuto_edit"> <img class="media-object" src="/image/plus.png" alt="..." style="
-    width: 20px;
-"> </a></li>
+                <li class="sidebar-brand">
+                    <div>Javascript 기초
+                        <a href="/tutorial/edit" style="display: inline-block;padding-left: 10px;">
+                            <img class="media-object" src="/image/plus.png" alt="..." style="  width: 20px;">
+                        </a>
+                    </div>
+
+
+                </li>
                 <li> <a href="#">코딩이란?</a> </li>
                 <li> <a href="#">코딩이란?</a> </li>
             </ul>
@@ -128,15 +77,9 @@
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row"> <a href="#menu-toggle" style="
-    top: 5px;
-    position: absolute;
-    left: 10px;
-    font-size: smaller;
-" class="btn btn-default-sm" id="menu-toggle">전체보기</a>
-                    <div class="col-lg-12" style="
-    text-align: center;">
+            <div class="container-fluid" style=" padding-left: 30px; padding-right: 30px;">
+                <div class="row"> <a href="#menu-toggle" style="  top: 5px;  position: absolute;  left: 10px;  font-size: smaller;" class="btn btn-default-sm" id="menu-toggle">전체보기</a>
+                    <div class="col-lg-12" style="  text-align: center;">
                         <h1>자바스크립트 기본</h1>
                         <p>2000.00.00</p>
                     </div>
@@ -152,17 +95,22 @@
         <!-- /#page-content-wrapper -->
     </div>
     <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="/JS/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/JS/bootstrap.min.js"></script>
-    <!-- Menu Toggle Script -->
     <script>
-        $("#menu-toggle").click(function (e) {
+        $("#menu-toggle").click(function(e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+
+        $(document).ready(function() {
+            if (screen.width < 400) {
+                location.href = '/tutorial/contents_win';
+            }
+        });
+
     </script>
+
+
+
 </body>
 
 </html>

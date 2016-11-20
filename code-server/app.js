@@ -12,32 +12,33 @@ var sessionstore = require('sessionstore');
 var store = sessionstore.createSessionStore();
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
-var ex = require('./routes/ex');
-var make = require('./routes/make');
-var version = require('./routes/version');
 var tutorial = require('./routes/tutorial');
 var qna = require('./routes/qna');
-var auth = require('./routes/auth');
 var dictionary = require('./routes/dictionary');
 var blog = require('./routes/blog');
 var my = require('./routes/my');
+var login = require('./routes/login');
+var signup = require('./routes/signup');
+
 
 
 var app = express();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/testcode');
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/code');
 var db = mongoose.connection;
 
 var UserSchema = new mongoose.Schema({
-    userid: {
-        type: String, required: true, unique: true
+    id: {
+        type: String,
+        required: true,
+        unique: true
     },
     pw: {
         type: String
     },
-    userName: {
+    username: {
         type: String,
         unique: true
     },
@@ -48,8 +49,21 @@ var UserSchema = new mongoose.Schema({
 
 
 var DicSchema = new mongoose.Schema({
-    title: {type: String},
-    contents: {type: String},
+    title: {
+        type: String
+    },
+    writer: {
+        type: String
+    },
+    token: {
+        type: String
+    },
+    date: {
+        type: String
+    },
+    contents: {
+        type: String
+    },
 });
 
 var BoardSchema = new mongoose.Schema({
@@ -62,10 +76,29 @@ var BoardSchema = new mongoose.Schema({
     title: {
         type: String
     },
+    date: {
+        type: String
+    },
     contents: {
         type: String
+    },
+    series: {
+        type: String
     }
-  });
+});
+
+var SeriesSchema = new mongoose.Schema({
+    token: {
+        type: String
+    },
+    title: {
+        type: String
+    },
+    writer: {
+        type: String
+    }
+});
+
 
 var QnABoardSchema = new mongoose.Schema({
     writer: {
@@ -80,19 +113,23 @@ var QnABoardSchema = new mongoose.Schema({
     contents: {
         type: String
     },
-    date: {type: String},
+    date: {
+        type: String
+    },
 
     A: [{
-      writer: {
-          type: String
-      },
-      title: {
-          type: String
-      },
-      contents: {
-          type: String
-      },
-      date: {type: String}
+        writer: {
+            type: String
+        },
+        title: {
+            type: String
+        },
+        contents: {
+            type: String
+        },
+        date: {
+            type: String
+        }
     }]
 });
 
@@ -100,6 +137,8 @@ Users = mongoose.model('users', UserSchema);
 QnABoards = mongoose.model('qnaboards', QnABoardSchema);
 Boards = mongoose.model('boards', BoardSchema);
 Dics = mongoose.model('dics', DicSchema);
+Serieses = mongoose.model('serieses', SeriesSchema);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -121,19 +160,16 @@ app.use(session({
 }));
 
 app.use('/', routes);
-app.use('/users', users);
-app.use('/make', make);
-app.use('/ex', ex);
-app.use('/version', version);
 app.use('/tutorial', tutorial);
 app.use('/qna', qna);
-app.use('/auth', auth);
 app.use('/dictionary', dictionary);
 app.use('/blog', blog);
 app.use('/my', my);
+app.use('/login', login);
+app.use('/signup', signup);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
@@ -144,7 +180,7 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
+    app.use(function (err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', {
             message: err.message,
@@ -155,7 +191,7 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
         message: err.message,

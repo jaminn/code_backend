@@ -84,7 +84,7 @@ header {
 }
 
 .woodBg {
-    height: 350px;
+    /*height: 350px;*/
     background-image: url(../image/typewriter-801921_1920.png);
     background-size: 1300px;
     background-position: center center;

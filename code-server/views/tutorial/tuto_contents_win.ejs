@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../load'); %>
+        <style>
+            .sidenavR {
+                border-left-style: solid;
+                border-width: 1px;
+                border-color: #ededed;
+                background-color: #fff;
+                height: 100%;
+                overflow-x: hidden;
+                position: fixed;
+                right: 0;
+                top: 0;
+                transition: .5s;
+                width: 0;
+                z-index: 1;
+            }
+            
+            .sidetext {
+                color: #818181;
+                display: block;
+                font-size: 15px;
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                transition: .3s;
+            }
+            
+            .sidenavRdiv {
+                color: #000;
+                display: block;
+                font-size: 15px;
+                padding: 8px;
+                text-decoration: none;
+                transition: .3s;
+            }
+            
+            .sidenavRhelp {
+                display: block;
+                font-size: 15px;
+                padding: 8px;
+                background-color: #ededed
+            }
+            
+            .sidenav a:hover,
+            .offcanvas a:focus,
+            .sidenavR a:hover,
+            .offcanvas a:focus {
+                color: #000;
+                text-decoration: none;
+            }
+            
+            .sidenav .closebtn,
+            .sidenavR .closebtn {
+                color: #818181;
+                font-size: 25px;
+                margin-left: 50px;
+                position: absolute;
+                right: 10px;
+                top: 0;
+            }
+            
+            @media screen and max-height 450px {
+                .sidenav,
+                .sidenavR {
+                    padding-top: 15px;
+                }
+                .sidenav a,
+                .sidenavR a {
+                    font-size: 18px;
+                }
+            }
+            
+            #editGhost {
+                color: #fff;
+                background-color: transparent;
+                float: right;
+                border-style: solid;
+                border-color: #fff;
+                border-width: 2px;
+            }
+            
+            #editGhost:hover {
+                color: #ffa000;
+                background-color: #fff;
+            }
+
+        </style>
+
+        <style>
+            @-webkit-keyframes check {
+                0% {
+                    height: 0;
+                    width: 0;
+                }
+                25% {
+                    height: 0;
+                    width: 10px;
+                }
+                50% {
+                    height: 20px;
+                    width: 10px;
+                }
+            }
+            
+            @-moz-keyframes check {
+                0% {
+                    height: 0;
+                    width: 0;
+                }
+                25% {
+                    height: 0;
+                    width: 10px;
+                }
+                50% {
+                    height: 20px;
+                    width: 10px;
+                }
+            }
+            
+            @-ms-keyframes check {
+                0% {
+                    height: 0;
+                    width: 0;
+                }
+                25% {
+                    height: 0;
+                    width: 10px;
+                }
+                50% {
+                    height: 20px;
+                    width: 10px;
+                }
+            }
+            
+            @keyframes check {
+                0% {
+                    height: 0;
+                    width: 0;
+                }
+                25% {
+                    height: 0;
+                    width: 10px;
+                }
+                50% {
+                    height: 20px;
+                    width: 10px;
+                }
+            }
+            
+            body {
+                /*  background-color: #6aa;*/
+                font-family: 'Lato', sans-serif;
+                font-weight: 100%;
+            }
+            
+            .wrapper {
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                color: #fff;
+                left: 50%;
+                position: absolute;
+                text-align: center;
+                top: 50%;
+            }
+            
+            .checkbox,
+            .checkbox-alt {
+                background-color: #fff;
+                display: inline-block;
+                height: 50px;
+                margin: 0 0.25em;
+                width: 50px;
+            }
+            
+            .checkbox label,
+            .checkbox-alt label {
+                display: block;
+                height: 50px;
+                position: relative;
+                width: 50px;
+            }
+            
+            .checkbox label:after,
+            .checkbox-alt label:after {
+                -moz-transform: scaleX(-1) rotate(135deg);
+                -ms-transform: scaleX(-1) rotate(135deg);
+                -webkit-transform: scaleX(-1) rotate(135deg);
+                transform: scaleX(-1) rotate(135deg);
+                -moz-transform-origin: left top;
+                -ms-transform-origin: left top;
+                -webkit-transform-origin: left top;
+                transform-origin: left top;
+                border-right: 4px solid #cee;
+                border-top: 4px solid #cee;
+                content: '';
+                display: block;
+                height: 20px;
+                left: 14px;
+                position: absolute;
+                top: 26px;
+                width: 10px;
+            }
+            
+            .checkbox label:hover:after,
+            .checkbox-alt label:hover:after {
+                border-color: #bdd;
+            }
+            
+            .checkbox input,
+            .checkbox-alt input {
+                display: none;
+            }
+            
+            .checkbox input:checked+label:after,
+            .checkbox-alt input:checked+label:after {
+                -webkit-animation: check 0.8s;
+                -moz-animation: check 0.8s;
+                -o-animation: check 0.8s;
+                animation: check 0.8s;
+                border-color: #5bc0de;
+            }
+            
+            .checkbox.checkbox-alt label:hover:after,
+            .checkbox-alt.checkbox-alt label:hover:after {
+                -webkit-animation: check 0.8s ease infinite;
+                -moz-animation: check 0.8s ease infinite;
+                -o-animation: check 0.8s ease infinite;
+                animation: check 0.8s ease infinite;
+            }
+            
+            .checkbox.checkbox-alt input:checked+label:after,
+            .checkbox-alt.checkbox-alt input:checked+label:after {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -o-animation: none;
+                animation: none;
+            }
+            
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-weight: 100;
+            }
+
+        </style>
+        <style>
+            #qid {
+                display: none;
+            }
+            
+            #helpid {
+                display: none;
+            }
+            
+            #checkid {
+                display: none;
+            }
+
+        </style>
+
+</head>
+
+<body>
+
+    <div id="mySidenavR" class="sidenavR" style="width:100%">
+        <div style="height: 50px;color: #fff;background-color: #ffa000;font-size: 20px;" class="sidenavRdiv">
+            파이썬 마스터하기...
+            <button id="editGhost" type="button" class="btn btn-outline-secondary" style="float: right;">edit</button>
+        </div>
+        <div class="oneques">
+            <div class="sidenavRdiv">
+                <div class="media">
+
+                    <div class="media-body">
+                        Q1.Print 함수로 "누구나 따라하는 파이썬!"을 출력해보세요
+                    </div>
+                    <span class="media-right">
+                        <button class="btn btn-info" onclick="checkhelp()" id="next">  > </button>
+                        <div class="checkbox" id="checkid">
+                            <input onclick="getfocus()" type="checkbox" id="cb" name="cb" />
+                            <label for="cb"></label>
+                        </div>
+                        <button class="btn btn-info" id="helpid" >help </button>        
+                    </span>
+                    <a href="#">
+                    </a>
+                </div>
+            </div>
+            <div class="sidenavRhelp" id="qid">
+                "누구나 따라하는 파이썬이 출력되었습니까?"
+            </div>
+        </div>
+
+        <div class="oneques">
+            <div class="sidenavRdiv">
+                <div class="media">
+
+                    <div class="media-body">
+                        Q1.Print 함수로 "누구나 따라하는 파이썬!"을 출력해보세요
+                    </div>
+                    <span class="media-right">
+                        <button class="btn btn-info" onclick="checkhelp()" id="next">  > </button>
+                            <div class="checkbox" id="checkid">
+                                    <input onclick="getfocus()" type="checkbox" id="cb" name="cb" />
+                                    <label for="cb"></label>
+                            </div>
+                            <button class="btn btn-info" id="helpid" >help </button>        
+                    </span>
+                    <a href="#">
+                    </a>
+                </div>
+            </div>
+            <div class="sidenavRhelp" id="qid">
+                "누구나 따라하는 파이썬이 출력되었습니까?"
+            </div>
+        </div>
+
+        <div class="oneques">
+            <div class="sidenavRdiv">
+                <div class="media">
+                    <div class="media-body">
+                        Q1.Print 함수로 "누구나 따라하는 파이썬!"을 출력해보세요
+                    </div>
+                    <span class="media-right">
+                            <button class="btn btn-info" onclick="checkhelp()" id="next">  > </button>
+                            <div class="checkbox" id="checkid">
+                                <input onclick="getfocus()" type="checkbox" id="cb" name="cb" />
+                                <label for="cb"></label>
+                            </div>
+                            <button class="btn btn-info" id="helpid" >help </button>        
+                    </span>
+                    <a href="#">
+                    </a>
+                </div>
+            </div>
+            <div class="sidenavRhelp" id="qid">
+                "누구나 따라하는 파이썬이 출력되었습니까?"
+            </div>
+        </div>
+
+        <div style="margin-top: 15px;text-align: center;background-color: #ffa000;color: #fff;position: fixed;bottom: 0px;width: 100%;">
+            <div>
+                <div class="col-xs-6" style="padding: 10px;border-style: solid;">이전</div>
+                <div class="col-xs-6" style="padding: 10px;border-style: solid;">다음</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkhelp() {
+            document.getElementById("qid").style.display = "block";
+            document.getElementById("helpid").style.display = "block";
+            document.getElementById("checkid").style.display = "block";
+            document.getElementById("next").style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
